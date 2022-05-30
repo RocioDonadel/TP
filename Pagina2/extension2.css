@@ -1,0 +1,80 @@
+* {
+    box-sizing: border-box;
+}
+
+:root{
+    font-size: 1.5vw;
+}
+
+body{
+    background-image: url("pink.webp");
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat; 
+}
+
+.grid-conteiner{
+    max-width: 1200px;
+    display: grid;
+    grid-template: 
+            "formulario formulario" 3vw
+            "perro1 perro2" 30vw
+            "perro3 perro4" 30vw
+            "perro5 perro6" 30vw
+            "formulario2 formulario2" 3vw / 50% 1fr;
+    margin: 0.5rem 12.5rem 1rem;
+    grid-gap: 0.75rem;
+    text-align: center;
+}
+
+.formulario{
+    grid-area: formulario;
+}
+
+.formulario2{
+    grid-area: formulario2;
+}
+
+.perro1{
+    grid-area: perro1;
+}
+.perro2{
+    grid-area: perro2;
+}
+
+.perro3{
+    grid-area: perro3;
+}
+
+.perro4{
+    grid-area: perro4;
+}
+
+.perro5{
+    grid-area: perro5;
+}
+
+.perro6{
+    grid-area: perro6;
+}
+
+.colorFondo{
+    background-color: rgb(255, 174, 149);
+    border: 0.5rem solid rgb(241, 132, 99);
+}
+
+.perritosAdopcion{
+    position: relative;
+    width: 14rem;
+    padding:1rem 0rem 0rem;
+}
+
+#home{
+    position: relative;
+    left: 13rem;
+}
+
+#casita{
+    width:5%;
+    height:5%;
+}

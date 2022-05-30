@@ -1,0 +1,290 @@
+* {
+    font-family:'Open Sans', 'Roboto Slab', 'Grape Nuts';
+    box-sizing: border-box;
+}
+
+:root{
+    font-size: 1.5vw;
+}
+
+body{
+    background-image: url("acuarela.webp");
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat; 
+}
+
+.grid-conteiner{
+    max-width: 1200px;
+    display: grid;
+    grid-template: 
+            "titulo titulo" 3rem
+            "header header" 19vw
+            "nav nav" 2rem
+            "aside cuerpo" 31.25rem 
+            "footer footer" 2.5rem / 30% 1fr;
+    margin: 0.5rem 12.5rem 1rem;
+}
+
+.colorFondo{
+    background-color: rgb(255, 224, 184);
+}
+
+.barra{
+    background-color: rgb(241, 191, 124);
+} 
+
+header{
+    grid-area: header; 
+    overflow: hidden;
+    margin: 0rem 0.2rem 0rem;
+}
+
+nav{
+    grid-area: nav;
+    display: flex;   
+    background-color: rgb(240, 194, 135);
+    margin: 0rem 0.2rem 0rem;
+    gap: 1rem;
+    justify-content: space-around;
+
+}
+
+#navFont{
+    font-size: 0.8rem;
+}
+
+.flexNav{
+    color:rgb(0, 0, 0);
+    text-align: center;
+    font-size: 0.7rem;
+    background-color: rgb(235, 168, 137);
+}
+
+.titulo{
+    grid-area:titulo;
+    text-align: justify;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0rem 0.2rem 0rem;
+}
+
+.flexTitulo{
+    color:rgb(155, 71, 23);
+    text-align: center;
+    font-size: 2rem;
+    letter-spacing: 1.2rem;
+}
+
+.cajitas{
+    position: relative;
+    background-color: rgb(223, 162, 112);
+    height:100%; 
+    width: 15%;
+    text-align: center;
+}
+
+aside{
+    grid-area: aside;
+    overflow: hidden;
+    text-align: justify;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(241, 191, 124);
+    margin: 0.2rem;
+    align-content: space-around;
+}
+
+.flexAside{
+    color:rgb(0, 0, 0);
+    text-align: center;
+    font-size: 1rem;
+}
+
+.cuerpo{
+    grid-area: cuerpo;
+    overflow: hidden;
+    text-align: justify;
+    padding: 1rem;
+    margin: 0.2rem;
+    font-size: 0.925rem;
+}
+
+footer{
+    grid-area: footer;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: rgb(241, 191, 124);
+    overflow: hidden;
+    align-items: center;
+    margin:0.2rem;
+
+}
+
+.flexFooter{
+    color:rgb(54, 37, 4);
+    text-align: center;
+    font-size: 0.7rem;
+}
+
+#imagenPortada{
+    width: 100%;
+
+}
+
+#imagenLogo{
+    width: 3rem;
+    height: 3rem;
+    position: relative;
+    align-self:stretch;
+    animation:girar infinite 10s linear;
+}
+
+#imagen1{
+    position: relative;
+    width: 100%;
+    border: 0.2rem solid rgb(206, 131, 61);
+}
+
+.logos{
+    width: 0.9rem;
+    height: 0.9rem;
+    position: relative;
+    top:0.1rem;
+}
+
+#boton{
+    border: 0.5rem solid sandybrown;
+    background-color: peru;
+}
+
+@keyframes girar {
+    from{
+        transform: rotatey(10deg);
+    }
+    to{
+        transform: rotatey(360deg);
+    }
+}
+
+@media only screen and (max-width: 600px){
+    :root{
+        font-size:0.9vw;
+    }
+
+    .grid-conteiner{
+        display: grid;
+        grid-template: 
+                "titulo titulo" 10vw 
+                "header header" 25vw
+                "nav nav" 13rem
+                "cuerpo cuerpo" 175rem
+                "footer footer" 5rem /50% 1fr;
+        margin: 0px;
+    }
+    
+    .flexTitulo{
+        font-size: 6rem;
+        text-align: center;
+    }
+     
+    aside{
+        display: none;
+        visibility: hidden;
+    }
+
+    nav{
+        grid-area: nav;
+        align-items: center;
+    }   
+    
+    #navFont{
+    font-size:3rem;
+    }
+    
+    .flexNav{
+        font-size: 2.5rem;
+        height: 100%;
+    }
+
+    .cuerpo{
+        grid-area: cuerpo;
+        font-size: 4.5rem;
+    }
+
+    footer{
+        flex-flow: row wrap;
+        grid-area: footer;
+        height: 200%;
+        justify-content: space-around;
+    }
+
+    .flexFooter{
+        font-size: 3.5rem;
+    }
+
+    #imagenPortada{
+        width: 100%;
+        position: relative;
+        bottom: 10%;
+    }
+    
+    .logos{
+        width: 4rem;
+        height: 4rem;
+    }
+
+    #imagenLogo{
+        width: 12rem;
+        height: 12rem;
+    }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 900px){
+    :root{
+        font-size:2vw;
+    }
+
+    .grid-conteiner{
+        display: grid;
+        grid-template: 
+                "titulo titulo" 3rem
+                "header header" 19vw
+                "nav nav" 2rem
+                "aside cuerpo" 31.25rem 
+                "footer footer" 2.5rem / 30% 1fr;
+        margin:0px;
+    }
+
+    .titulo{
+        margin:0px;
+    }
+
+    header{
+        margin:0px;
+    }
+
+    nav{
+        margin:0px;
+    }
+
+    .flexNav{
+        font-size: 0.797rem;
+    }
+
+    aside{
+        margin:0px;
+    }
+
+    .cuerpo{
+        margin:0px;
+    }
+
+    footer{
+        margin:0px;
+    }
+}
+

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="app.js"></script>
+    <link rel="STYLESHEET" href="extension4.css">
+    <link rel="icon" href="ico.ico">
+    <title>Formulario Adopción</title>
+</head>
+<body>
+    <div id="home"> 
+        <a href="https://unique-cranachan-a09dca.netlify.app/"> <img id="casita" src="casita.ico" alt="menuhome" > </a>
+    </div>
+    <form class="grid-conteiner" method="get" id="formulario" name="formulario_" action="https://unique-cranachan-a09dca.netlify.app/">
+        <div id="titulo"> 
+           <p> FORMULARIO DE ADOPCIÓN </p>
+           <img id="imagenLogo" src="logo.png" alt="logopatitasfelices">
+        </div>
+        <label for="nombre">Nombre:</label> 
+        <input class="espacio_relleno" type="text" name="nombre" id="Nombre"> <br>
+        <label for="email">Email:</label>
+        <input class="espacio_relleno" type="text" name="email" id="Email"> <br>
+        <label for="telefono" >Teléfono de contacto: </label>
+        <input class="espacio_relleno" type="text" name="teléfono" id="Telefono"> <br>
+        <label for="consulta_mascotas"> ¿Ha tenido mascotas antes o tiene? </label>
+        <input class="checkbox" type="radio" name="opcion"  id="Si"> Si </input>
+        <input class="checkbox" type="radio" name="opcion"  id="No"> No </input> <br>
+        <div id="comentario"> 
+            <label for="mascotas"> En caso de haber tenido mascota <br> indique cuáles y cuántas </label>
+            <textarea name="comentario" rows="5" cols="80" id="Mascotas" placeholder="Escriba aquí..."> </textarea>
+        </div>
+        <label> Seleccione horario para un encuentro en el refugio: </label>
+        <select name="horario" id="select"> 
+            <option>De 8am a 12pm</option>
+            <option>De 13pm a 16pm</option>
+            <option>De 16am a 19pm</option>
+        </select> <br> 
+        <div id="perfiles">
+            <label for="perrito" >Indique en qué perfil está interesado <br> si no está interesado en ninguno en especial ponga 0</label>
+            <input class="espacio_relleno" type="text" name="perfil" id="Perfil"> <br>
+        </div>
+        <button type="button" onclick="validacion()"> Enviar </button>
+    </form>
+</body>
+</html>
